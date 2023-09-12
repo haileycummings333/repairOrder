@@ -1,2 +1,3 @@
 For task #4 I used the TextView widget
 
+TextView shows text and EditText allows the user to edit it.

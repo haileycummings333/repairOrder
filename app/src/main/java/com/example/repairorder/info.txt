@@ -1,0 +1,2 @@
+For task #4 I used the TextView widget
+

@@ -10,9 +10,9 @@
         android:id="@+id/totalNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="12dp"
-        android:text="$0.00"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/_0_00"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -20,14 +20,12 @@
         android:id="@+id/totalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="35dp"
         android:text="@string/total"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/totalNum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/taxText" />
+        app:layout_constraintEnd_toStartOf="@+id/totalNum" />
 
     <TextView
         android:id="@+id/textView"
@@ -47,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -56,47 +54,56 @@
         android:id="@+id/orderType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order Type"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/order_type"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="207dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/labor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Labor"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/labor"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/laborEdit"
-        tools:layout_editor_absoluteX="68dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parts" />
 
     <TextView
         android:id="@+id/technician"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Technician"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/technician"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/technicianEdit"
-        tools:layout_editor_absoluteX="56dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderType" />
 
     <TextView
         android:id="@+id/inspection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inspection"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="53dp"
+        android:text="@string/inspection"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/inspectionEdit"
-        tools:layout_editor_absoluteX="56dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/technician" />
 
     <TextView
-        android:id="@+id/Paint"
+        android:id="@+id/paint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:text="Paint"
+        android:layout_marginTop="55dp"
+        android:text="@string/paint"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PaintEdit"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inspection" />
 
     <EditText
         android:id="@+id/laborEdit"
@@ -138,10 +145,11 @@
         android:id="@+id/orderTypeEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintBaseline_toBaselineOf="@+id/orderType"
-        tools:layout_editor_absoluteX="186dp" />
+        app:layout_constraintStart_toEndOf="@+id/orderType" />
 
     <EditText
         android:id="@+id/technicianEdit"
@@ -159,67 +167,74 @@
         android:id="@+id/partsEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/PaintEdit"
-        tools:layout_editor_absoluteY="505dp" />
+        app:layout_constraintTop_toBottomOf="@+id/PaintEdit" />
 
     <TextView
-        android:id="@+id/Parts"
+        android:id="@+id/parts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Parts"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="62dp"
+        android:text="@string/parts"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/partsEdit"
-        tools:layout_editor_absoluteX="72dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paint" />
 
     <TextView
         android:id="@+id/subtotalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="47dp"
-        android:text="Subtotal"
+        android:text="@string/subtotal"
         android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/subtotalNum"
-        app:layout_constraintTop_toBottomOf="@+id/laborEdit" />
+        app:layout_constraintBottom_toTopOf="@+id/taxText"
+        app:layout_constraintEnd_toEndOf="@+id/taxText"
+        app:layout_constraintStart_toStartOf="@+id/taxText" />
 
     <TextView
         android:id="@+id/taxText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
-        android:text="Tax"
+        android:text="@string/tax"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/totalText"
-        app:layout_constraintEnd_toStartOf="@+id/taxNum"
-        app:layout_constraintTop_toBottomOf="@+id/subtotalText"
-        app:layout_constraintVertical_bias="0.969" />
+        app:layout_constraintEnd_toEndOf="@+id/totalText"
+        app:layout_constraintStart_toStartOf="@+id/totalText" />
 
-    <TextView
-        android:id="@+id/subtotalNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:text="$0.00"
-        app:layout_constraintBottom_toTopOf="@+id/taxNum"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/taxNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:text="$0.00"
+        android:text="@string/_0_00"
         app:layout_constraintBottom_toTopOf="@+id/totalNum"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/totalNum"
+        app:layout_constraintStart_toStartOf="@+id/totalNum" />
+
 
     <Button
-        android:id="@+id/submitButton"
+        android:id="@+id/sButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="652dp" />
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subTotNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/_0_00"
+        app:layout_constraintBottom_toTopOf="@+id/taxNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtotalText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
